@@ -6,16 +6,16 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author lp
- * @date 2020/3/9 23:19
+ * @auther lp
+ * @create 2020-3-11 14:57
  */
 @Configuration
-public class ApplicationContextConfig {
-
+public class ApplicationContextConfig
+{
     @Bean
-//    @LoadBalanced   //使用自己的负载均衡算法时注掉
-    public RestTemplate restTemplate(){
+    @LoadBalanced
+    public RestTemplate getRestTemplate()
+    {
         return new RestTemplate();
     }
-
 }
